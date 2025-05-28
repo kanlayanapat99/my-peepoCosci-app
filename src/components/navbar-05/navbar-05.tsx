@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Navbar05Page = () => {
   return (
-    <div className="min-h-screen bg-muted pt-24">
+    <div>
       <nav className="fixed top-6 inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full z-50">
         <div className="h-full flex items-center justify-between mx-auto px-4">
           <div className="flex items-center gap-2 md:gap-6">
@@ -14,14 +14,17 @@ const Navbar05Page = () => {
 
             {/* Navigation Links */}
             <div className="hidden md:flex items-center gap-6 ml-4">
-              <Link href="/" className="text-sm font-medium hover:underline">
+              <Link href="/" className="text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition-colors">
                 Home
               </Link>
-              <Link href="/product" className="text-sm font-medium hover:underline">
+              <Link href="/product" className="text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition-colors">
                 Product
               </Link>
-              <Link href="/about" className="text-sm font-medium hover:underline">
-                About
+              <Link href="/about" className="text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition-colors">
+                About us
+              </Link>
+              <Link href="/course" className="text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition-colors">
+                Course
               </Link>
             </div>
 
@@ -47,15 +50,7 @@ const Navbar05Page = () => {
           </div>
         </div>
       </nav>
-
-      {/* Hero or page content here */}
-      <section className="text-center mt-20 py-6">
-        <h1 className="text-4xl font-bold">Welcome to Our Platform</h1>
-        <p className="mt-4 text-muted-foreground">
-          Explore features that help you grow and connect.
-        </p>
-      </section>
-    </div>
+      </div>
   );
 };
 

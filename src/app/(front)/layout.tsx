@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${sarabun.className} antialiased`} >
         <Navbar05Page/>
-        {children}
+        <main className="pt-24"> {children} </main>
         <Footer05Page/>
       </body>
     </html>
