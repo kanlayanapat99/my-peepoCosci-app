@@ -5,11 +5,9 @@ export default async function About() {
   const apiInfo = await data.json();
   return (
     <>
-      <p>{JSON.stringify(apiInfo)}</p>
       {
-          apiInfo && <p>{}</p>
+          apiInfo && < Contact03Page version={apiInfo.data.version}/>
       }
-      < Contact03Page/>
     </>
   );
 }
