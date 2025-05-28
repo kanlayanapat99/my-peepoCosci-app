@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sarabun } from "next/font/google";
 import "./globals.css";
+import Navbar05Page from "@/components/navbar-05/navbar-05";
 
 const sarabun = Sarabun ({
   subsets: ['thai'],
@@ -21,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sarabun.className} antialiased`}
-      >
+        className={`${sarabun.className} antialiased`} >
+        <Navbar05Page/>
         {children}
       </body>
     </html>

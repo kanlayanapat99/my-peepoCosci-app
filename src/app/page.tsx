@@ -1,10 +1,13 @@
-import AppWelcome from "./components/AppWelcome";
+import Footer05Page from "@/components/footer-05/footer-05";
+import Hero02 from "@/components/hero-02/hero-02";
+import Testimonial04 from "@/components/testimonial-04/testimonial-04";
 
 export default function Home() {
   return (
     <div>
-      <h1>Home page</h1>
-      <AppWelcome headTitle="SWU" isShow={true} />
+      <Hero02 />
+      <Testimonial04/>
+      <Footer05Page/>
     </div>
   );
 }
