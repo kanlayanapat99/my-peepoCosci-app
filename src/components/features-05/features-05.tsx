@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Image from "next/image";
 
 type Props = {
   courses: {
@@ -22,7 +23,7 @@ const Features05Page = ({ courses }: Props) => {
           {courses.map((course) => (
             <Card key={course.id} className="flex flex-col border rounded-xl overflow-hidden">
               <CardHeader>
-                <img src={course.picture} alt={course.title} className="w-full h-40 object-cover rounded-md"/>
+                <Image src={course.picture} alt={course.title} width={400} height={160} className="object-cover rounded-md"/>
                 <h4 className="mt-3 text-xl font-semibold">{course.title}</h4>
                 <p className="text-muted-foreground">{course.detail}</p>
               </CardHeader>
