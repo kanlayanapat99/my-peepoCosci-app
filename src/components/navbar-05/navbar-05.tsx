@@ -42,13 +42,19 @@ const Navbar05Page = () => {
               <Search className="!h-5 !w-5" />
             </Button>
             <Link href="/login">
-              <Button className="rounded-full">
-                Sign In
-              </Button>
+              <Button className="rounded-full">Sign In</Button>
             </Link>
           </div>
         </div>
       </nav>
+
+      {/* Hero or page content here */}
+      <section className="text-center mt-20 py-6">
+        <h1 className="text-4xl font-bold">Welcome to Our Platform</h1>
+        <p className="mt-4 text-muted-foreground">
+          Explore features that help you grow and connect.
+        </p>
+      </section>
     </div>
   );
 };
