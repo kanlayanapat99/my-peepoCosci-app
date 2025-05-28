@@ -16,7 +16,7 @@ const Features05Page = ({ courses }: Props) => {
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-screen-lg w-full py-10 px-6">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center">
-          Boost Your Stratety with Exploring Courses from CodingThailand
+          Boost Your Strategy with Exploring Courses from CodingThailand
         </h2>
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (

@@ -6,7 +6,7 @@ export default async function CoursePage() {
 
   return (
     <>
-      <Features05Page courses={apiInfo.data} />
+      { apiInfo && <Features05Page courses={apiInfo.data} />}
     </>
   );
 }

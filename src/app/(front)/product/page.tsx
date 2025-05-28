@@ -12,15 +12,15 @@ const Product = () => {
   return (
     <div className="max-w-screen-xl mx-auto pt-8 px-6 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="text-3xl font-bold tracking-tight">Posts</h2>
+        <h2 className="text-3xl font-bold tracking-tight">Products</h2>
         <Select defaultValue="recommended">
           <SelectTrigger className="w-[180px]">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="recommended">Peepoted</SelectItem>
-            <SelectItem value="latest">PoPeePo</SelectItem>
-            <SelectItem value="popular">PoPeeted</SelectItem>
+            <SelectItem value="recommended">Recommended</SelectItem>
+            <SelectItem value="latest">Lastest</SelectItem>
+            <SelectItem value="popular">Popular</SelectItem>
           </SelectContent>
         </Select>
       </div>
