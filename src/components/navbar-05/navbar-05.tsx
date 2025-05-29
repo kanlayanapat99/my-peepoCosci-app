@@ -3,6 +3,8 @@ import { Input } from "@/components/ui/input";
 import { Logo } from "./logo";
 import { Search } from "lucide-react";
 import Link from "next/link";
+import CountCartItem from "@/app/(front)/components/CountCartItem";
+import { ShoppingBasket } from "lucide-react";
 
 const Navbar05Page = () => {
   return (
@@ -26,6 +28,9 @@ const Navbar05Page = () => {
               <Link href="/course" className="text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition-colors">
                 Course
               </Link>
+              <Link href="/cart" className="text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition-colors">
+                Cart
+              </Link>
             </div>
 
             <div className="relative hidden md:block">
@@ -40,12 +45,18 @@ const Navbar05Page = () => {
           <div className="flex items-center gap-2">
             <Button
               size="icon"
-              className="bg-muted text-foreground hover:bg-accent shadow-none rounded-full md:hidden"
-            >
+              className="bg-muted text-foreground hover:bg-accent shadow-none rounded-full md:hidden">
               <Search className="!h-5 !w-5" />
             </Button>
+            <Link href="/cart">
+            <Button className="rounded-full bg-blue-700 text-white hover:bg-blue-500">
+              <ShoppingBasket className="mr-1" /> <CountCartItem /> item(s) </Button>
+            </Link>
             <Link href="/login">
               <Button className="rounded-full">Sign In</Button>
+            </Link>
+            <Link href="/signup">
+              <Button className="rounded-full">Sign Up</Button>
             </Link>
           </div>
         </div>
