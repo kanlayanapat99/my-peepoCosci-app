@@ -21,7 +21,7 @@ const formSchema = z.object({
   password: z.string().min(6, "Password must be atleast 6 characters"),
 });
 
-const Login01Page = () => {
+const Signup01Page = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       email: "",
@@ -39,7 +39,7 @@ const Login01Page = () => {
       <div className="max-w-xs w-full flex flex-col items-center">
         
         <p className="mt-4 text-xl font-bold tracking-tight">
-          Log In ระบบขายสินค้าออนไลน์ CoSci
+          Sign Up
         </p>
 
         <div className="my-7 w-full flex items-center justify-center overflow-hidden">
@@ -88,22 +88,16 @@ const Login01Page = () => {
               )}
             />
             <Button type="submit" className="mt-4 w-full">
-              Log In
+              Register
             </Button>
           </form>
         </Form>
 
         <div className="mt-5 space-y-5">
-          <Link
-            href="#"
-            className="text-sm block underline text-muted-foreground text-center"
-          >
-            Forgot your password?
-          </Link>
           <p className="text-sm text-center">
-            Don&apos;t have an account?
-            <Link href="/signup" className="ml-1 underline text-muted-foreground">
-              Create account
+            Have account already?
+            <Link href="/login" className="ml-1 underline text-muted-foreground">
+              Sign In
             </Link>
           </p>
         </div>
@@ -113,4 +107,4 @@ const Login01Page = () => {
 };
 
 
-export default Login01Page;
+export default Signup01Page;
