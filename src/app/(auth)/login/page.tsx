@@ -39,7 +39,7 @@ const Login01Page = () => {
       <div className="max-w-xs w-full flex flex-col items-center">
         
         <p className="mt-4 text-xl font-bold tracking-tight">
-          Log In ระบบขายสินค้าออนไลน์ CoSci
+          Log In
         </p>
 
         <div className="my-7 w-full flex items-center justify-center overflow-hidden">
