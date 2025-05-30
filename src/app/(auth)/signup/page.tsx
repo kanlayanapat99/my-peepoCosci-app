@@ -62,8 +62,11 @@ const onSubmit = async (form: z.infer<typeof formSchema>) => {
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-xs w-full flex flex-col items-center">
         
-        <p className="mt-4 text-xl font-bold tracking-tight">
+        <p className="mt-4 text-xl text-center font-bold tracking-tight">
           Sign Up
+        </p>
+        <p className="mt-2 text-xl text-center font-bold text-blue-600 tracking-tight">
+          CodingwithPeepo
         </p>
 
         <div className="my-7 w-full flex items-center justify-center overflow-hidden">

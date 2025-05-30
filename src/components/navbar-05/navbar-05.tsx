@@ -5,8 +5,14 @@ import { Search } from "lucide-react";
 import Link from "next/link";
 import CountCartItem from "@/app/(front)/components/CountCartItem";
 import { ShoppingBasket } from "lucide-react";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
-const Navbar05Page = () => {
+const Navbar05Page = async () => {
+  const session = await auth.api.getSession({
+    headers: await headers() //get user data now log in
+  });
+
   return (
     <div>
       <nav className="fixed top-6 inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full z-50">
@@ -52,12 +58,19 @@ const Navbar05Page = () => {
             <Button className="rounded-full bg-blue-700 text-white hover:bg-blue-500">
               <ShoppingBasket className="mr-1" /> <CountCartItem /> item(s) </Button>
             </Link>
-            <Link href="/login">
-              <Button className="rounded-full">Sign In</Button>
-            </Link>
-            <Link href="/signup">
-              <Button className="rounded-full">Sign Up</Button>
-            </Link>
+            
+            {
+            session && (
+              <>
+                <div className="flex items-center">
+                  Hello, {session.user.name}
+                </div>
+                <Button variant="destructive" asChild>
+                  <Link href="/dashboard">Dashboard</Link>
+                </Button>
+              </>
+            )
+          }
           </div>
         </div>
       </nav>
