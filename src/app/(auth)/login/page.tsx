@@ -45,7 +45,7 @@ const Login01Page = () => {
                 onSuccess: (ctx) => {
                     //redirect to the dashboard or sign in page
                     console.log(ctx.data)
-                    router.replace('/dashboard')
+                    router.replace('/')
                 },
                 onError: (ctx) => {
                     // display the error message
