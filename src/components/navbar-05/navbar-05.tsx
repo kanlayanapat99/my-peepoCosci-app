@@ -58,7 +58,6 @@ const Navbar05Page = async () => {
             <Button className="rounded-full bg-blue-700 text-white hover:bg-blue-500">
               <ShoppingBasket className="mr-1" /> <CountCartItem /> item(s) </Button>
             </Link>
-
             {
             session && (
               <>
