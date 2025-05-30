@@ -132,7 +132,7 @@ const onSubmit = async (form: z.infer<typeof formSchema>) => {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="mt-4 w-full">
+            <Button type="submit" className="mt-4 w-full  bg-blue-700 hover:bg-blue-500">
               Register
             </Button>
           </form>
